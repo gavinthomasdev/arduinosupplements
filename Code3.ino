@@ -13,10 +13,15 @@ void setup() {
 void loop() {
   buttonState = digitalRead(BUTTON);
 
-  if (buttonState == HIGH) {
+  //digitalWrite(LED1, (buttonState == HIGH ? HIGH : LOW));
+  digitalWrite(LED1, buttonState);
+
+  if (buttonState == HIGH) delay(20);
+  
+  /*if (buttonState == HIGH) {
     digitalWrite(LED1, HIGH);
     delay(20);
   } else {
     digitalWrite(LED1, LOW);
-  }
+  }*/
 }
