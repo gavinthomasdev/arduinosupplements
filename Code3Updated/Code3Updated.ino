@@ -1,7 +1,6 @@
 int LED1 = 8;
 int BUTTONON = 4;
 int BUTTONOFF = 5;
-bool ledOn = false;
 
 void setup() {
   Serial.begin(9600);
@@ -13,11 +12,10 @@ void setup() {
 }
 
 void loop() {
-  int toggle = (ledOn ? digitalRead(BUTTONOFF) : digitalRead(BUTTONON));
+  int toggle = (digitalRead(LED1) ? digitalRead(BUTTONOFF) : digitalRead(BUTTONON));
   
   if (toggle) {
-    ledOn = !ledOn;
-    digitalWrite(LED1, ledOn);
+    digitalWrite(LED1, !digitalRead(LED1));
     delay(20);
   }
 }
