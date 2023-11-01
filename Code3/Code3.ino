@@ -1,6 +1,4 @@
-int LED1 = 8;
-int BUTTON = 4;
-int buttonState = 0;
+const int LED1 = 8, BUTTON = 4;
 
 void setup() {
   Serial.begin(9600);
@@ -11,9 +9,8 @@ void setup() {
 }
 
 void loop() {
-  buttonState = digitalRead(BUTTON);
-
-  digitalWrite(LED1, buttonState);
-
-  if (buttonState) delay(20);
+  if (digitalRead(BUTTON)) {
+    digitalWrite(LED1, HIGH);
+    delay(20);
+  }
 }

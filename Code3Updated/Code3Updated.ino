@@ -10,10 +10,11 @@ void setup() {
 }
 
 void loop() {
-  int toggle = (digitalRead(LED1) ? digitalRead(BUTTONOFF) : digitalRead(BUTTONON));
+  bool ledOn = digitalRead(LED1);
+  int toggle = (ledOn ? digitalRead(BUTTONOFF) : digitalRead(BUTTONON));
   
   if (toggle) {
-    digitalWrite(LED1, !digitalRead(LED1));
+    digitalWrite(LED1, !ledOn);
     delay(20);
   }
 }
