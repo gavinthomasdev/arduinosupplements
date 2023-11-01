@@ -1,6 +1,4 @@
-int LED1 = 8;
-int BUTTONON = 4;
-int BUTTONOFF = 5;
+const int LED1 = 8, BUTTONON = 4, BUTTONOFF = 5;
 
 void setup() {
   Serial.begin(9600);
