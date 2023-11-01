@@ -10,9 +10,7 @@ void setup() {
 }
 
 void loop() {
-  angle = analogRead(potentio);
-  angle = map(angle, 0, 1023, 0, 179);
-  // angle = map(analogRead(potentio), 0, 1023, 0, 179)
+  angle = map(analogRead(potentio), 0, 1023, 0, 179)
   servo1.write(angle);
   Serial.println(angle);
   delay(5);
