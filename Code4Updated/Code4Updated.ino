@@ -1,7 +1,7 @@
 #include <Servo.h>
 
-Servo servo1;
-int BUTTON = 4;
+const Servo servo1;
+const int BUTTON = 4;
 
 void setup() {
   servo1.attach(9);
