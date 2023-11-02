@@ -1,4 +1,4 @@
-int LED1 = 8;
+const int LED1 = 8;
 
 void setup() {
   Serial.begin(9600); // init serial monitor on 9600 baud
