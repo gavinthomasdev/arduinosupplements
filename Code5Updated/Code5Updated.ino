@@ -1,7 +1,7 @@
 #include <Servo.h>
 
 Servo servo1;
-const int potentio = A0;
+const int POTENTIO = A0;
 
 void setup() {
   Serial.begin(9600);
@@ -9,7 +9,7 @@ void setup() {
 }
 
 void loop() {
-  int angle = map(analogRead(potentio), 0, 1023, 0, 89);
+  int angle = map(analogRead(POTENTIO), 0, 1023, 0, 89);
   servo1.write(angle);
   Serial.println(angle);
   delay(5);
