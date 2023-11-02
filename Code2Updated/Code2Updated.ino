@@ -1,5 +1,5 @@
-int LED1 = 8, LED2 = 9;
-int STATUS = 0;
+const int LED1 = 8, LED2 = 9;
+int status = 0;
 
 void setup() {
   Serial.begin(9600); // init serial monitor on 9600 baud
@@ -10,9 +10,9 @@ void setup() {
 }
 
 void loop() {
-  STATUS = !STATUS;
+  status = !status;
   
-  digitalWrite(LED1, STATUS);
-  digitalWrite(LED2, !STATUS);
+  digitalWrite(LED1, status);
+  digitalWrite(LED2, !status);
   delay(1000);
 }
